@@ -1,0 +1,6 @@
+{
+  "name": "Hambúrguer Nas Alturas — Cardápio Digital",
+  "description": "Cardápio digital oficial da lanchonete Hambúrguer Nas Alturas. O sabor com a melhor vista da cidade! Confira nossos hambúrgueres artesanais, bebidas, sucos naturais e adicionais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

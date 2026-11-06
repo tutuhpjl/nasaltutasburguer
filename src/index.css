@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-primary: #0A0F1F;
+    --bg-secondary: #0E1530;
+    --accent-yellow: #F7B500;
+    --accent-yellow-light: #FFC21A;
+    --text-white: #FFFFFF;
+    --text-muted: #E8E8E8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    background-color: #0A0F1F;
+    color: #FFFFFF;
+    overflow-x: clip;
+  }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0A0F1F 0%, #0E1530 55%, #0A0F1F 100%);
+    overflow-x: clip;
+  }
+}
+
+.font-display {
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+}
+
+.font-script {
+  font-family: 'Kaushan Script', cursive;
+}
+
+/* Ocultar barra de rolagem mantendo o toque fluido na barra de abas */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animação discreta das estrelinhas no topo */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.star-twinkle {
+  animation: twinkle 3.2s ease-in-out infinite;
+}
+
+/* Faixa amarela com acabamento de pincelada lateral inspirado na arte original */
+.brush-banner {
+  clip-path: polygon(
+    0% 4%,
+    98% 0%,
+    100% 22%,
+    97% 48%,
+    100% 76%,
+    97% 100%,
+    1% 96%,
+    0% 68%,
+    2% 35%
+  );
+}
+
+.price-badge {
+  clip-path: polygon(
+    2% 4%,
+    98% 0%,
+    100% 35%,
+    97% 70%,
+    100% 100%,
+    2% 96%,
+    0% 60%,
+    3% 28%
+  );
+}
+
+/* Respeito estrito a prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

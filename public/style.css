@@ -1,0 +1,85 @@
+/* ==========================================================================
+   HAMBÚRGUER NAS ALTURAS — Cardápio Digital (style.css)
+   Mobile-First (360px–430px) -> Breakpoints: 640px, 768px, 1024px
+   ========================================================================== */
+
+:root {
+  --bg-dark: #0A0F1F;
+  --bg-card: #0E1530;
+  --bg-deep: #060A15;
+  --yellow: #F7B500;
+  --yellow-light: #FFC21A;
+  --text-white: #FFFFFF;
+  --text-muted: #E8E8E8;
+  --font-display: 'Oswald', 'Bebas Neue', sans-serif;
+  --font-script: 'Kaushan Script', cursive;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 55%, var(--bg-dark) 100%);
+  color: var(--text-white);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.brush-banner {
+  background-color: var(--yellow);
+  color: var(--bg-dark);
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  clip-path: polygon(0% 4%, 98% 0%, 100% 22%, 97% 48%, 100% 76%, 97% 100%, 1% 96%, 0% 68%, 2% 35%);
+}
+
+.price-badge {
+  background-color: var(--yellow);
+  color: var(--bg-dark);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  padding: 0.25rem 0.85rem;
+  border-radius: 0.375rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
